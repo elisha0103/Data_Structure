@@ -3,18 +3,18 @@
 
 int main()
 {
-	//¾ç¹æÇâ ¿¬°á ¸®½ºÆ®ÀÇ »ı¼º ¹× ÃÊ±âÈ­//
+	//ì–‘ë°©í–¥ ì—°ê²° ë¦¬ìŠ¤íŠ¸ì˜ ìƒì„± ë° ì´ˆê¸°í™”//
 	List list;
 	int data;
 	ListInit(&list);
 
-	//8°³ÀÇ µ¥ÀÌÅÍ ÀúÀå//
+	//8ê°œì˜ ë°ì´í„° ì €ì¥//
 	LInsert(&list, 1); LInsert(&list, 2);
 	LInsert(&list, 3); LInsert(&list, 4);
 	LInsert(&list, 5); LInsert(&list, 6);
 	LInsert(&list, 7); LInsert(&list, 8);
 
-	//2ÀÇ ¹è¼ö µ¥ÀÌÅÍ »èÁ¦
+	//2ì˜ ë°°ìˆ˜ ë°ì´í„° ì‚­ì œ
 	if (LFirst(&list, &data))
 	{
 		if (data % 2 == 0)
@@ -34,16 +34,16 @@ int main()
 		
 	}
 
-	//ÀúÀåµÈ µ¥ÀÌÅÍÀÇ Á¶È¸//
+	//ì €ì¥ëœ ë°ì´í„°ì˜ ì¡°íšŒ//
 	if (LFirst(&list, &data))
 	{
 		printf("%d ", data);
 
-		//¿ŞÂÊ ³ëµå·Î ÀÌµ¿ÇÏ¸ç µ¥ÀÌÅÍ Á¶È¸//
+		//ì™¼ìª½ ë…¸ë“œë¡œ ì´ë™í•˜ë©° ë°ì´í„° ì¡°íšŒ//
 		while (LPrevious(&list, &data))
 			printf("%d ", data);
 
-		//¿À¸¥ÂÊ ³ëµå·Î ÀÌµ¿ÇÏ¸ç µ¥ÀÌÅÍ Á¶È¸//
+		//ì˜¤ë¥¸ìª½ ë…¸ë“œë¡œ ì´ë™í•˜ë©° ë°ì´í„° ì¡°íšŒ//
 		while (LNext(&list, &data))
 		{
 			printf("%d ", data);
