@@ -21,4 +21,9 @@ BTreeNode* GetRightSubTree(BTreeNode* bt);  // 오른쪽 서브 트리 주소 값 반환
 void MakeLeftSubTree(BTreeNode* main, BTreeNode* sub);  // 왼쪽 트리와 트리의 연결을 담당
 void MakeRightSubTree(BTreeNode* main, BTreeNode* sub);  // 오른쪽 트리와 트리의 연결을 담당
 
+typedef void (*VisitFuncPtr)(BTData data);
+
+void PreorderTraverse(BTreeNode* bt, VisitFuncPtr action);
+void InorderTraverse(BTreeNode* bt, VisitFuncPtr action);
+void PostorderTraverse(BTreeNode* bt, VisitFuncPtr action);
 #endif
